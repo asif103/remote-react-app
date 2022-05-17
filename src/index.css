@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::placeholder {
+  color: #ADADAD;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ADADAD;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ADADAD;
+}
+
+input:focus {
+  outline: none !important;
+  border: 1px solid transparent;
+  box-shadow: 0 0 10px #ADADAD;
+}
+
+/* input[type='checkbox'] {
+  background-color: #fff;
+
+} */
+/* input[type=checkbox]:checked {
+  background-color: #fff;
+  ;
+} */
+
+input[type="checkbox"] {
+  background-color: red !important;
+}
