@@ -6,13 +6,19 @@ import DropDown from '../DropDown/DropDown';
 import { occupation } from '../../assets/fakeData/fakeData';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
 
-        console.log(data)
+       if(data){
+           notify()
+
+       }
     };
+    const notify = () => toast.success("Successfully Registered!");
     return (
         <Container fluid>
 
@@ -123,7 +129,7 @@ const SignUp = () => {
                             </div>
 
                         </form>
-
+                        <ToastContainer />
                     </Container>
                 </Col>
             </Row>
